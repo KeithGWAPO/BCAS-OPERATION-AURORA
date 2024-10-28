@@ -1,0 +1,326 @@
+
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #d2d2d2;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background:#161a2d;
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+}
+
+.sidebar:hover{
+    width: 260px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header img {
+    width: 42px;
+    border-radius: 50%;
+}
+
+.sidebar-header h2{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 23px;
+}
+
+.sidebar-links {
+    list-style: none;
+    margin-top: 20px;
+    height: 70%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar-links h4 span{
+    opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span{
+    opacity: 1;
+}
+
+.sidebar-links h4{
+    color: #fff;
+    font-weight: 500;
+    margin: 10px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.sidebar-links .menu-separator {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(1);
+    transform: translateY(-50%);
+    background: #333578;
+    transform-origin: right;
+    transition-duration: 0.2s;
+}
+
+.sidebar:hover .sidebar-links .menu-separator{
+    transition-delay: 0s;
+    transform: scaleX(0);
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    color: #dbd4d4e3;
+    font-weight: 500;
+    padding: 15px 10px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar-links li a:hover {
+    background: #ffffff2d;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.user-account {
+    margin-top: auto;
+    padding: 12px 10px;
+    margin-left: -10px;
+}
+
+.user-account .user-profile {
+    display: flex;
+    align-items: center;
+    color: #e5dede;
+}
+
+.user-account img{
+    width: 42px;
+    border-radius: 50%;
+}
+
+.user-account h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.user-detail {
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.user-account span{
+    font-size: 0.775rem;
+    font-weight: 500;
+    display: block;
+    margin-top: 0;
+}
+
+.sidebar:hover .user-account{
+    background: #ffffff2d;
+    border-radius: 4px;
+}
+
+
+
+
+/* Main content styling */
+.main-content {
+    margin-left: 85px; /* Space for sidebar */
+    padding: 20px;
+    transition: margin-left 0.4s ease;
+}
+
+.sidebar:hover + .main-content {
+    margin-left: 260px; /* Expanded sidebar width */
+}
+
+/* Headings within the main content */
+.main-content h2, .main-content h4 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Card style for statistics */
+.card {
+    background: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #161a2d;
+}
+
+
+
+
+/* Table styling for reports */
+.reports-table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reports-table thead th {
+    background-color: #161a2d;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #333578;
+}
+
+.reports-table tbody td {
+    padding: 12px;
+    color: #333;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.reports-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.reports-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.statistics-container {
+    margin-bottom: 1.5rem;
+}
+
+.statistics-container h4 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #161a2d;
+}
+
+
+
+
+/* Styles for Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #161a2d; /* Background color updated */
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    z-index: 10;
+}
+
+.sticky-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff; /* Font color updated */
+}
+
+/* Statistics and Table Styling (if needed) */
+.statistics-container {
+    margin-bottom: 1.5rem;
+}
+
+/* Example for Table Styling */
+.table-striped {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table-success th {
+    background-color: #e0f4e8;
+}
+
+.reports-table td, .reports-table th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 430px) {
+    .statistics-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 430px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+
+    .main-content h2, .main-content h4 {
+        font-size: 1.25rem;
+    }
+}
